@@ -22,7 +22,11 @@
 
 ; start of actual program
 	
-	
+loop	LDI R0, GLOVAR
+	BRZ loop
+	TRAP X21
+	AND R1,R1,#0
+	STI R1, GLOVAR	
 
 ;process R0
 	;check for start codon
