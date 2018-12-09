@@ -15,10 +15,7 @@
 	LD R1, ascG
 	ADD R1,R1,R0
 	BRz Val
-	LD R1,ascU 
-	ADD R1,R1,R0
-	BRz Val
-	BR notVal
+	
 
 Val	STI R0, buffer
 	LD R1,REG1
