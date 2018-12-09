@@ -1,6 +1,6 @@
 ; ISR.asm
-; Name: Meha Halabe
-; UTEid: mbh2622
+; Name: Meha Halabe & Tejal Kulkarni
+; UTEid: tk8563
 ; Keyboard ISR runs when a key is struck
 ; Checks for a valid RNA symbol and places it at x4600
         .ORIG x2600
@@ -15,11 +15,15 @@
 	LD R1, ascG
 	ADD R1,R1,R0
 	BRz Val
-	
+	LD R1,ascU 
+	ADD R1,R1,R0
+	BRz Val
+	BR notVal
 
 Val	STI R0, buffer
 	LD R1,REG1
 	RTI
+
 
 notVal 	AND R1,R1,#0
 	STI R1, buffer
