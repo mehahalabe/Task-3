@@ -22,12 +22,12 @@
 
 ; start of actual program
 	
+	
 loop	LDI R0, GLOVAR
 	BRZ loop
 	TRAP X21
 	AND R1,R1,#0
-	STI R1, GLOVAR	
-
+	STI R1, GLOVAR
 ;process R0
 	;check for start codon
 	LD R1, ascA
@@ -37,7 +37,7 @@ loop	LDI R0, GLOVAR
 A_STATE AND R2,R2,#0
 loop1	LDI R0, GLOVAR
 	BRZ loop1
-	TRAP X21		;print character
+	TRAP X21
 	AND R1,R1,#0
 	STI R1, GLOVAR
 	LD R1,ascU
@@ -71,9 +71,9 @@ loop2	LDI R0, GLOVAR
 	LD R1,ascU
 	ADD R1,R1,R0
 	BRZ loop
+
 print	LD R0,bar
 	TRAP X21
-
 	
 ;stop codons
 loop3	LDI R0, GLOVAR
