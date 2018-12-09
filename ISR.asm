@@ -21,7 +21,8 @@ Val	STI R0, buffer
 	LD R1,REG1
 	RTI
 
-
+notVal 	AND R1,R1,#0
+	STI R1, buffer
 	
 	RTI
 
