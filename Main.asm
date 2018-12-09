@@ -67,7 +67,8 @@ loop2	LDI R0, GLOVAR
 	LD R1,ascU
 	ADD R1,R1,R0
 	BRZ loop
-
+print	LD R0,bar
+	TRAP X21
 
 	
 ;stop codons
